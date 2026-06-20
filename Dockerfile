@@ -318,6 +318,8 @@ ENV PATH="/opt/hermes/bin:/opt/hermes/.venv/bin:/opt/data/.local/bin:${PATH}"
 RUN mkdir -p /opt/data
 VOLUME [ "/opt/data" ]
 
+USER root
+
 # s6-overlay's /init is PID 1. It sets up the supervision tree, runs
 # /etc/cont-init.d/* (our stage2 hook), starts s6-rc services
 # declared in /etc/s6-overlay/s6-rc.d/, then exec's its remaining
