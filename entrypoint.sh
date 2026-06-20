@@ -1,3 +1,3 @@
 #!/bin/sh
-chown -R hermes:hermes /opt/hermes/.hermes
-exec "$@"
+chown -R 10000:10000 /opt/hermes/.hermes
+exec /init /opt/hermes/docker/main-wrapper.sh "$@"
